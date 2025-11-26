@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PATKAI INN Hotel & Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>PATKAI INN Hotel & Restaurant</h1>
+  </header>
+  <nav>
+    <a href="#amenities">Amenities</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Book</a>
+    <a href="#map">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="wrap">
+    <!-- HERO SLIDESHOW -->
+    <section class="hero card" aria-label="hero">
+      <div class="hero-controls">
+        <div class="dotbar" id="dotbar"></div>
+        <div class="muted">Photos & Offers</div>
+      </div>
+      <div class="slides" id="slides">
+        <div class="slide" style="background-image:url('https://via.placeholder.com/1600x900?text=Patkai+Inn+-+Lobby')">
+          <div class="slide-overlay">
+          	<div class="hero-banner">
+          		<img src="image/hotel.jpg" class="hero-banner-img">
+          		<div class="hero-text">
+          			<h2>Welcome to PATKAI INN</h2><p class="muted">Comfort. Taste. Hotel</p>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('https://via.placeholder.com/1600x900?text=Dining+Area')">
+          <div class="slide-overlay"><h2>Fine Dining</h2><p class="muted">Local Assamese flavors & international dishes.</p></div>
+        </div>
+        <div class="slide" style="background-image:url('https://via.placeholder.com/1600x900?text=Rooms')">
+          <div class="slide-overlay"><h2>Cozy Rooms</h2><p class="muted">Clean, safe & comfortable stays.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section id="amenities" class="card">
+      <h2>Dining Options & Amenities</h2>
+      <p class="muted">We offer a wide selection of services to make your visit memorable.</p>
+      <div class="amenities" style="margin-top:12px">
+        <ul>
+          <li>Breakfast</li><li>Brunch</li><li>Lunch</li><li>Dinner</li><li>Catering</li><li>Dessert</li><li>Table service</li><li>Restroom</li>
+        </ul>
+      </div>
+      <div style="margin-top:12px" class="grid cols-2">
+        <div>
+          <h2>Opening Hours</h2>
+          <div id="hours" class="muted">Loading hours...</div>
+        </div>
+        <div>
+          <h2>Closing Hours</h2>
+          <div id="status" class="muted">Loading Hours...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="card">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img alt="gallery1" src="https://via.placeholder.com/400x250?text=Patkai+1" />
+        <img alt="gallery2" src="https://via.placeholder.com/400x250?text=Patkai+2" />
+        <img alt="gallery3" src="https://via.placeholder.com/400x250?text=Patkai+3" />
+        <img alt="gallery4" src="https://via.placeholder.com/400x250?text=Patkai+4" />
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="booking" class="card">
+      <h2>Book a Table / Room</h2>
+      <p class="muted">Fill this short form — we'll confirm your booking.</p>
+      <form id="bookingForm">
+        <div class="row cols-2">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" class="input" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" class="input" required />
+          </div>
+        </div>
+
+        <div class="row cols-2" style="margin-top:10px">
+          <div>
+            <label for="date">Date</label>
+            <input id="date" type="date" class="input" required />
+          </div>
+          <div>
+            <label for="time">Time</label>
+            <input id="time" type="time" class="input" required />
+          </div>
+        </div>
+
+        <div style="margin-top:10px">
+          <label for="guests">Guests</label>
+          <input id="guests" type="number" min="1" value="2" class="input" required />
+        </div>
+
+        <div style="margin-top:10px">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" rows="3" class="input"></textarea>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center">
+          <button class="btn" type="submit">Request Booking</button>
+          <div id="bookingMsg" class="muted">We'll send confirmation via phone or WhatsApp.</div>
+        </div>
+      </form>
+    </section>
+
+    <!-- MAP & CONTACT -->
+    <section id="map" class="card">
+      <h2>Find Us</h2>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!..." aria-hidden="false" tabindex="0"></iframe>
+      <div id="contact" style="margin-top:12px">
+        <strong>Address:</strong> 9VJX+C78, Stilwell Rd, Mandal Basti, Jagun, Assam 786174<br>
+        <strong>Phone:</strong> <a id="phoneLink" href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a><br>
+        <strong>Email:</strong> <a href="mailto:contact@patkaiinn.com">contact@patkaiinn.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp" id="whatsappBtn" href="#" aria-label="Chat on WhatsApp">💬</a>
+
+  <footer>
+    &copy; 2025 PATKAI INN Hotel And Restaurant | All rights reserved.
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <!--
+    IMPORTANT: Replace the firebaseConfig object below with your project's config.
+    To create a Firebase project and get config: https://console.firebase.google.com/
+  -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script>
+    // ========== CONFIGURE THESE VALUES ==========
+    const firebaseConfig = {
+      apiKey: "REPLACE_API_KEY",
+      authDomain: "REPLACE_AUTH_DOMAIN",
+      databaseURL: "REPLACE_DATABASE_URL",
+      projectId: "REPLACE_PROJECT_ID",
+      storageBucket: "REPLACE_STORAGE_BUCKET",
+      messagingSenderId: "REPLACE_MESSAGING_ID",
+      appId: "REPLACE_APP_ID"
+    };
+    // =============================================
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Opening hours (example) — change as needed
+    const openingHours = {
+      // weekday: [openHour24, closeHour24]
+      0: [9, 22], // Sunday
+      1: [7, 23],
+      2: [7, 23],
+      3: [7, 23],
+      4: [7, 23],
+      5: [7, 23],
+      6: [7, 23]
+    };
+
+    function getStatusNow() {
+      const now = new Date();
+      // use user's local timezone (site visitors). If you want server timezone, use server.
+      const day = now.getDay();
+      const hour = now.getHours();
+      const [openH, closeH] = openingHours[day] || [9, 21];
+      if (hour < openH) return {text: 'Opening Soon', css: 'muted'};
+      if (hour >= openH && hour < closeH) return {text: 'Open Now', css: 'open'};
+      return {text: 'Closed', css: 'muted'};
+    }
+
+    // show hours and status
+    function renderHours() {
+      const container = document.getElementById('hours');
+      const lines = [];
+      const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      for (let i=0;i<7;i++){
+        const [o,c] = openingHours[i] || [9,21];
+        lines.push(`${days[i]}: ${String(o).padStart(2,'0')}:00 - ${String(c).padStart(2,'0')}:00`);
+      }
+      container.innerHTML = lines.join('<br>');
+    }
+
+    // push status to firebase realtime path /status
+    function pushStatusToFirebase() {
+      const status = getStatusNow().text;
+      db.ref('status/current').set({value: status, updatedAt: Date.now()});
+    }
+
+    // listen for status changes in firebase (useful if staff change it)
+    db.ref('status/current').on('value', snap => {
+      const data = snap.val();
+      if (!data) return;
+      const el = document.getElementById('status');
+      el.textContent = data.value + (data.note ? ' — ' + data.note : '');
+    });
+
+    // initial
+    renderHours();
+    pushStatusToFirebase();
+    setInterval(pushStatusToFirebase, 60_000); // update every 60s
+
+    // BOOKING FORM: saves booking requests to /bookings
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        name: document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        date: document.getElementById('date').value,
+        time: document.getElementById('time').value,
+        guests: document.getElementById('guests').value,
+        notes: document.getElementById('notes').value.trim(),
+        createdAt: Date.now(),
+        status: 'pending'
+      };
+      const newRef = db.ref('bookings').push();
+      try {
+        await newRef.set(payload);
+        document.getElementById('bookingMsg').textContent = 'Booking requested — we will confirm soon.';
+        bookingForm.reset();
+        // Optionally send WhatsApp message link
+      } catch(err) {
+        document.getElementById('bookingMsg').textContent = 'Error: Could not submit. Check Firebase config.';
+        console.error(err);
+      }
+    });
+
+    // WhatsApp button setup
+    const whatsappNumber = '+91XXXXXXXXXX'; // replace with your number using international format
+    const whatsappBtn = document.getElementById('whatsappBtn');
+    function openWhatsApp() {
+      const text = encodeURIComponent('Hello Patkai Inn! I would like to enquire about a booking.');
+      whatsappBtn.href = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g,'')}?text=${text}`;
+      whatsappBtn.target = '_blank';
+    }
+    openWhatsApp();
+
+    // HERO SLIDESHOW JS
+    const slidesEl = document.getElementById('slides');
+    const slideEls = Array.from(slidesEl.children);
+    const dotbar = document.getElementById('dotbar');
+    let current = 0;
+    function goTo(i){
+      current = (i + slideEls.length) % slideEls.length;
+      slidesEl.style.transform = `translateX(-${current * 100}%)`;
+      Array.from(dotbar.children).forEach((d,idx)=> d.classList.toggle('active', idx===current));
+    }
+    // create dots
+    slideEls.forEach((_,i)=>{
+      const d = document.createElement('div'); d.className='dot'; d.addEventListener('click', ()=>goTo(i)); dotbar.appendChild(d);
+    });
+    goTo(0);
+    setInterval(()=>goTo(current+1), 6000);
+
+    // OPTIONAL: allow staff to override status from a simple admin input on firebase console.
+
+  </script>
+</body>
+</html>
