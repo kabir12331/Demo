@@ -1,0 +1,52 @@
+:root{--blue:#1a73e8;--dark:#0b3a66;--muted:#6b7280;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; background:#f3f6fb; color:#0f1724}
+    /* Header & Nav */
+    header{background:linear-gradient(135deg,var(--blue),#4dabf7); color:#fff; padding:28px 18px; text-align:center}
+    header h1{margin:0; font-size:1.6rem; letter-spacing:0.2px}
+    nav{display:flex; justify-content:center; gap:18px; background:#fff; padding:10px 12px; position:sticky; top:0; z-index:50; box-shadow:0 6px 18px rgba(15,23,36,0.06)}
+    nav a{color:var(--dark); text-decoration:none; font-weight:600}
+    nav a:hover{color:var(--blue)}
+    .wrap{max-width:1100px; margin:28px auto; padding:0 18px}
+
+    /* Hero slider */
+    .hero{position:relative; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(15,23,36,0.08)}
+    .slides{display:flex; transition: transform 0.6s ease}
+    .slide{min-width:100%; height:380px; background-size:cover; background-position:center; position:relative; display:flex; align-items:flex-end}
+    .slide-overlay{background:linear-gradient(180deg, transparent 20%, rgba(6,12,34,0.6)); padding:28px; color:#fff; width:100%}
+    .hero-controls{position:absolute; left:12px; right:12px; top:12px; display:flex; justify-content:space-between}
+    .dotbar{display:flex; gap:8px}
+    .dot{width:10px; height:10px; border-radius:99px; background:rgba(255,255,255,0.5); cursor:pointer}
+    .dot.active{background:#fff}
+
+    /* Main sections */
+    .card{background:var(--card); border-radius:12px; padding:18px; box-shadow:0 6px 18px rgba(15,23,36,0.04); margin-bottom:20px}
+    h2{margin:0 0 12px 0; color:var(--dark); font-size:1.1rem}
+    .grid{display:grid; gap:14px}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .amenities ul{display:flex; gap:8px; flex-wrap:wrap; padding:0; list-style:none}
+    .amenities li{background:#f1f5f9; padding:8px 12px; border-radius:999px; font-size:0.95rem}
+
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px}
+    .gallery img{width:100%; height:130px; object-fit:cover; border-radius:10px}
+
+    /* Booking form */
+    form label{display:block; font-weight:600; margin-bottom:6px; font-size:0.9rem}
+    .input, .select, textarea{width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6eef8; outline:none; font-size:0.95rem}
+    .row{display:grid; gap:12px}
+    .row.cols-2{grid-template-columns:repeat(2,1fr)}
+    .btn{background:var(--blue); color:#fff; padding:10px 14px; border-radius:10px; border:none; cursor:pointer; font-weight:700}
+    .muted{color:var(--muted); font-size:0.9rem}
+
+    /* Floating WhatsApp */
+    .whatsapp{position:fixed; right:18px; bottom:18px; z-index:100; background:#25D366; color:#fff; width:56px; height:56px; border-radius:999px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(37,211,102,0.2); text-decoration:none}
+
+    /* map */
+    iframe.map{height:320px; width:100%; border-radius:10px}
+
+    /* footer */
+    footer{margin-top:20px; padding:18px; text-align:center; color:#fff; background:linear-gradient(135deg,var(--blue),#0b61d6)}
+
+    /* responsive */
+    @media(max-width:720px){.hero{height:260px}.slide{height:260px}.grid.cols-2{grid-template-columns:1fr}.row.cols-2{grid-template-columns:1fr}}
